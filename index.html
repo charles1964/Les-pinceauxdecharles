@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur Audio - Boléro de Ravel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .player-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #8B0000; /* Rouge foncé pour un style classique */
+        }
+        audio {
+            width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <h1>Boléro de Ravel</h1>
+        <p>Le Boléro de Ravel</p>       
+
+        <!-- Lecteur audio -->
+        <audio controls>
+            <source src="assets/audio/Le Bolero de Ravel.mp3">
+            Votre navigateur ne supporte pas la balise audio.
+        </audio>
+
+        <p><code> </p>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Impressionniste de Charles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0a1628;
+            --secondary-color: #1e3a5f;
+            --accent-color: #c9a84c;
+            --light-color: #e8eef4;
+            --cream: #f0f4f8;
+            --golden: #c9a84c;
+            --shadow: 0 4px 6px rgba(10, 22, 40, 0.2);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--cream);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(30, 58, 95, 0.08) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(201, 168, 76, 0.08) 0%, transparent 20%);
+        }
+
+        header {
+            background: rgba(10, 22, 40, 0.97);
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(10, 22, 40, 0.4);
+            backdrop-filter: blur(5px);             
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #b0c4de;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 22, 40, 0.6), rgba(10, 22, 40, 0.6)), url('images/toile1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow:
+                3px 3px 0 #0a1628,
+                6px 6px 0 rgba(10, 22, 40, 0.5);
+            color: #c9a84c;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(45deg, rgba(201, 168, 76, 0.8), rgba(180, 140, 50, 0.8));
+            border-radius: 4px;
+            z-index: -1;
+            transform: skew(-15deg);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow:
+                2px 2px 0 #000,
+                4px 4px 0 rgba(0, 0, 0, 0.5);
+            color: #c9a84c;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1e3a5f;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #c9a84c;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #c9a84c;
+            color: #0a1628;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 168, 76, 0.4);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0a1628;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #c9a84c;
+            margin: 1rem auto;
+        }
+
+        .galerie {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            <section id="galerie" class="section">
+  <div class="container">
+    <h2 class="section-title">L'image galerie</h2>
+    <!-- ... -->
+    <a href="#galerie" class="btn">Explorer l'image galerie</a>
+  </div>
+        }
+
+        .oeuvre {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(10, 22, 40, 0.1);
+            border-top: 4px solid #1e3a5f;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .oeuvre:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(10, 22, 40, 0.2);
+            border-top-color: #c9a84c;
+        }
+
+        .oeuvre img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .oeuvre-info {
+            padding: 1.5rem;
+        }
+
+        .oeuvre-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #0a1628;
+        }
+/* Pour les œuvres verticales */
+.oeuvre.vertical {
+    grid-column: span 1;
+}
+
+.oeuvre.vertical .oeuvre-image {
+    height: 400px; /* Hauteur plus importante pour les formats verticaux */
+}
+
+.oeuvre.vertical .oeuvre-image img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+        .oeuvre-info .technique {
+            font-size: 0.9rem;
+            color: #1e3a5f;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .oeuvre-info .description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .prix {
+            font-weight: 700;
+            color: #1e3a5f;
+            font-size: 1.1rem;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(10, 22, 40, 0.2);
+            border: 4px solid #1e3a5f;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(10, 22, 40, 0.1);
+            border-top: 4px solid #1e3a5f;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #0a1628;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #b0c4de;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a5f;
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        footer {
+            background: #0a1628;
+            color: #b0c4de;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 3px solid #c9a84c;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .social-links li {
+            margin: 0 1rem;
+        }
+
+        .social-links a {
+            color: #b0c4de;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #c9a84c;
+        }
+
+        .audio-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(10, 22, 40, 0.92);
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(10, 22, 40, 0.4);
+            border: 1px solid #c9a84c;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .audio-btn {
+            background: none;
+            border: none;
+            color: #b0c4de;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .audio-btn:hover {
+            color: #c9a84c;
+        }
+
+        .track-info {
+            margin: 0 10px;
+            font-size: 0.9rem;
+            color: #b0c4de;
+            min-width: 150px;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #b0c4de;
+        }
+
+        .volume-slider {
+            width: 80px;
+            accent-color: #c9a84c;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .galerie {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .audio-player {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .track-info {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Galerie Impressionniste <span>de Charles</span></a>
+                <ul class="nav-links">
+                    <li><a href="#galerie"><img src="images/galerie-accueil.jpg" alt="Galerie d'art" style="height: 40px;"></a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>L'Art dans la Lumière</h1>
+            <p>Découvrez ma collection de toiles impressionnistes où chaque coup de pinceau capture l'émotion du moment présent.</p>
+            <a href="#galerie" class="btn">Explorer la galerie</a>
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+      <section id="galerie" class="section">
+        <div class="container">
+            <h2 class="section-title">Galerie</h2>
+            <div class="galerie">
+        
+                <!-- Toile 1 -->
+                <div class="oeuvre">
+                    <img src="images/toile1.jpg" alt="Rêverie méditerranéenne : Le Château des Songes Bleus">
+                    <div class="oeuvre-info">
+                        <h3>"Rêverie méditerranéenne : Le Château des Songes Bleus"</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Une vision envoûtante où la réalité se mêle au rêve, comme un souvenir d’enfance flottant entre ciel et mer. Au cœur de cette toile, un village aux maisons colorées s’accroche à la falaise, défiant les lois de la gravité. Leurs façades jaunes, ocre et rouges, aux toits écarlates, semblent danser sous la lumière dorée, comme si chaque pierre était bercée par le vent marin.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 2 -->
+                <div class="oeuvre">
+                    <img src="images/toile2.jpg" alt="Instant d’enfance au jardin">
+                    <div class="oeuvre-info">
+                        <h3>Instant d’enfance au jardin</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Au cœur d’un jardin baigné de lumière, un petit garçon est assis dans l’herbe, entouré de pâquerettes délicates. Le regard baissé, absorbé dans un moment simple, il semble jouer ou rêver, comme suspendu hors du temps. Son pull aux motifs colorés contraste doucement avec le vert intense de la pelouse, apportant une touche de vie et de tendresse à la scène.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 3 -->
+                <div class="oeuvre">
+                    <img src="images/toile3.jpg" alt="Le Pont Vieux de Montauban">
+                    <div class="oeuvre-info">
+                        <h3>Le Pont Vieux de Montauban</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>Vue du Tarn depuis la rive gauche", mettant en valeur l'équilibre entre la force de l'architecture de briques et la douceur du fleuve.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 4 -->
+                <div class="oeuvre">
+                    <img src="images/toile4.jpg" alt="Les Parasols de Deauville">
+                    <div class="oeuvre-info">
+                        <h3>Les Parasols de Deauville</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette toile est une célébration joyeuse et rythmée de l'été sur la Côte Fleurie. Elle met en scène les célèbres parasols multicolores qui font la renommée de cette station balnéaire normande.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 5 - Version verticale originale -->
+                    <div class="oeuvre vertical"> 
+                    <div class="oeuvre-image">
+                    <img src="images/toile5.jpg" alt="Village typique de Sicile">
+                   </div>  
+                    <div class="oeuvre-info">
+                        <h3>Village typique de Sicile</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm (format vertical)</p>
+                        <p class="description">C'est la Sicile des vêtements suspendus au soleil, des maisons avec balcons donnant sur la mer, des rues étroites et des escaliers, des enfants qui jouent dans la rue et des personnes âgées debout devant leur porte. Des endroits où il y a peu à faire, où la vie passe lentement et où les petites joies du quotidien sont appréciées.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 6 -->
+                <div class="oeuvre">
+                    <img src="images/toile6.jpg" alt="Matin de roses sur l'étang aux voiliers">
+                    <div class="oeuvre-info">
+                        <h3>Matin de roses sur l'étang aux voiliers</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Une symphonie de couleurs où la nature s'éveille en douceur. Au premier plan, des roses épanouies dansent sous la rosée matinale, leurs pétales délicats baignés d'une lumière dorée. Leurs tons roses et corail contrastent avec le vert profond des feuilles, créant une harmonie vibrante qui attire l'œil.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 7 -->
+                <div class="oeuvre vertical">
+              <div class="oeuvre-image">
+                  <img src="images/toile7.jpg" alt="Sérénité aux Citrons de Ferrmat vertical">
+                  </div>
+                  <div class="oeuvre-info">
+                  <h3>Sérénité aux Citrons de Ferrmat vertical</h3>
+                  <p class="technique">Acrylique sur toile - 40x50 cm (format vertical)</p>
+                  <p class="description">La palette de couleurs, dominée par le contraste entre le bleu de la mer et le jaune solaire des fruits, dégage une sensation de chaleur, de vacances et de joie. C'est une œuvre lumineuse qui célèbre la "douceur de vivre" méditerranéenne et la beauté des paysages côtiers.</p>                                                 
+                  <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 8 -->
+                <div class="oeuvre">
+                    <img src="images/toile8.jpg" alt="Montauban, Reflets d’Histoire et de Lumière">
+                    <div class="oeuvre-info">
+                        <h3>Montauban, Reflets d’Histoire et de Lumière</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette aquarelle capture avec délicatesse l’essence romantique et historique de Montauban, ville emblématique du Tarn-et-Garonne. Le tableau met en scène un paysage urbain baigné dans une lumière douce et changeante, où les tons pastel – ocres, roses, verts et bleus – se mêlent harmonieusement pour évoquer une atmosphère à la fois sereine et vibrante.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 9 -->
+                <div class="oeuvre">
+                    <img src="images/toile9.jpg" alt="Un Village face à la MerU">
+                    <div class="oeuvre-info">
+                        <h3>Un Village face à la Mer</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette toile acryliqye dégage une sensation de sérénité et d’évasion. Elle évoque un lieu préservé, presque hors du temps, où l’homme s’intègre discrètement à la nature. Le spectateur est invité à ressentir la brise marine, entendre le ressac des vagues, et s’abandonner à la contemplation</p>                              
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 10 -->
+                <div class="oeuvre">
+                    <img src="images/toile10.jpg" alt="Le Feu du Souvenir">
+                    <div class="oeuvre-info">
+                        <h3>Le Feu du Souvenir</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette toile intime et touchante rend hommage à une figure paternelle à travers une scène simple, mais profondément chargée d’émotion. Au cœur d’un jardin foisonnant de couleurs, un homme se tient devant un four extérieur, occupé à cuire des aliments, dans un geste à la fois quotidien et presque rituel.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+               <!-- Toile 11 - Version verticale originale -->
+              <div class="oeuvre vertical">
+              <div class="oeuvre-image">
+                  <img src="images/toile11.jpg" alt="FoRêverie Parisienne : L’Ombre de la Dame de Ferrmat vertical">
+                  </div>
+                  <div class="oeuvre-info">
+                  <h3>Rêverie Parisienne : L’Ombre de la Dame de Fer</h3>
+                  <p class="technique">Acrylique sur toile - 40x50 cm (format vertical)</p>
+                  <p class="description">Cette toile vibrante capture l’âme chaleureuse de Paris : des maisons aux tons ensoleillés, une brasserie accueillante sous son auvent rouge, et la silhouette élégante de la Tour Eiffel veillant au loin. Entre fleurs, pavés et lumière dorée, c’est un instant de poésie urbaine, où chaque détail murmure l’esprit bohème et intemporel de la ville.</p>                                                 
+                  <p class="prix"></p>
+             </div>
+          </div>
+                 <!-- Toile 12 -->
+                <div class="oeuvre">
+                    <img src="images/toile12.jpg" alt="L’Échappée Sauvage">
+                    <div class="oeuvre-info">
+                        <h3>L’Échappée Sauvage</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description"> Une cavalière et son cheval explorent un paysage montagneux aux eaux turquoise, où la nature impose sa grandeur. Les touches impressionnistes mêlent lumière et mouvement, capturant l’harmonie entre l’homme et les éléments.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 13-->
+                <div class="oeuvre">
+                    <img src="images/toile13.jpg" alt="Village au bord de l'eau">
+                    <div class="oeuvre-info">
+                        <h3>Village au bord de l'eau</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Un alignement de maisons aux toits orangés surplombe une plage lumineuse aux reflets rosés, bordée par une mer d'un bleu éclatant.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 14 -->
+                <div class="oeuvre">
+                    <img src="images/toile14.jpg" alt="La Promenade Champêtre">
+                    <div class="oeuvre-info">
+                        <h3>La Promenade Champêtre</h3>
+                        <p class="technique">Aqurelle sur toile - 40x50 cm</p>
+                        <p class="description"> Deux silhouettes enfantines s'aventurent au cœur d'une prairie verdoyante parsemée de fleurs, encadrées par deux arbres protecteurs sous un ciel léger.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 15 -->
+                <div class="oeuvre">
+                    <img src="images/toile15.jpg" alt="L'Escale au Casino">
+                    <div class="oeuvre-info">
+                        <h3>L'Escale au Casino</h3>
+                        <p class="technique">Aquarelle sur toile - 40x50 cm</p>
+                        <p class="description">Une vue animée d'un port où de nombreux voiliers sont au repos, dominés par les célèbres tours rayées et l'enseigne du casino en arrière-plan.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 16 -->
+                <div class="oeuvre">
+                    <img src="images/toile16.jpg" alt="Ronde paisible au Lac des Minimes">
+                    <div class="oeuvre-info">
+                        <h3>Ronde paisible au Lac des Minimes</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Sur les rives lumineuses du Lac des Minimes, une file de canards glisse doucement entre terre et eau, animant le paysage d’un mouvement tranquille. Les teintes turquoise du lac contrastent avec la douceur des feuillages, créant une atmosphère apaisante où nature et sérénité se rencontrent.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 17-->
+                <div class="oeuvre">
+                    <img src="images/toile17.jpg" alt="Éclat de Montmartre">
+                    <div class="oeuvre-info">
+                        <h3>Éclat de Montmartre</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Une interprétation colorée et chaleureuse du célèbre Moulin Rouge, se dressant fièrement parmi les toits et les clochers parisiens sous un ciel doré.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+            <!-- Toile 18 - Version verticale originale -->
+              <div class="oeuvre vertical">
+              <div class="oeuvre-image">
+                  <img src="images/toile18.jpg" alt="La Dame de Fer en Pastel - Format vertical">
+                  </div>
+                  <div class="oeuvre-info">
+                  <h3>La Dame de Fer en Pastel</h3>
+                  <p class="technique">Huile sur toile - 40x50 cm (format vertical)</p>
+                  <p class="description">Une vue poétique de la Tour Eiffel dominant la Seine et son pont, capturée dans des tons doux et rêveurs avec des reflets chatoyants sur l'eau.</p>
+                  <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 19 - Version verticale originale -->
+              <div class="oeuvre vertical">
+              <div class="oeuvre-image">
+                  <img src="images/toile19.jpg" alt="Douceur d’automne à Notre-Dame - Format vertical">
+                  </div>
+                  <div class="oeuvre-info">
+                  <h3>Douceur d’automne à Notre-Dame</h3>
+                  <p class="technique">Huile sur toile - 40x50 cm (format vertical)</p>
+                  <p class="description">Une scène paisible de Notre-Dame de Paris, baignée dans une lumière douce, où les teintes chaudes des arbres d’automne contrastent avec le bleu calme de la Seine. Le style naïf et délicat donne à la cathédrale une atmosphère intemporelle et presque rêveuse.</p>                                                 
+                  <p class="prix"></p>
+                    </div>
+                </div>
+               <!-- Toile 20-->
+                <div class="oeuvre">
+                    <img src="images/toile20.jpg" alt="Éclaircie sur Trouville">
+                    <div class="oeuvre-info">
+                        <h3>Éclaircie sur Trouville</h3>
+                        <p class="technique">Peinture sur toile - 40x50 cm</p>
+                        <p class="description">Sous un ciel chargé qui s’ouvre timidement à la lumière, la plage de Trouville s’étire entre mer agitée et élégantes façades normandes. Au premier plan, une silhouette minuscule semble accueillir l’immensité, capturant un instant de liberté face à la puissance tranquille des éléments.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 21-->
+                <div class="oeuvre">
+                    <img src="images/toile21.jpg" alt="Paris au crépuscule doré">
+                    <div class="oeuvre-info">
+                        <h3>Paris au crépuscule doré</h3>
+                        <p class="technique">Huile toile - 30x20 cm</p>
+                        <p class="description">Cette toile capture une scène parisienne douce et lumineuse, où la tour Eiffel se dresse dans une atmosphère chaleureuse aux teintes jaunes et pastel. Les silhouettes floues des passants, les arbres délicatement esquissés et les façades colorées créent une ambiance poétique et paisible, comme un instant suspendu au cœur de la ville.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 22-->
+                 <div class="oeuvre">
+                    <img src="images/toile22.jpg" alt="Le Port des Rêves Calmes">
+                    <div class="oeuvre-info">
+                        <h3>Le Port des Rêves Calmes</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">"Une scène paisible de bord de mer où des barques colorées reposent sur une eau turquoise, bercées par une lumière douce. Les maisons aux teintes chaudes contrastent avec le ciel rosé, évoquant une fin de journée sereine dans un village méditerranéen.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 23 - Version verticale originale -->
+                 <div class="oeuvre vertical">
+                <div class="oeuvre-image">
+                    <img src="images/toile23.jpg" alt="Roses en Lumière">
+                    </div>
+                    <div class="oeuvre-info">
+                        <h3>Roses en Lumière</h3>
+                        <p class="technique">Huile sur toile - 30x25 cm (format vertical)</p>
+                        <p class="description">Un bouquet de fleurs aux teintes chaudes — orangées, rosées et dorées — semble vibrer sur un fond doux et brumeux. Les touches épaisses et spontanées donnent vie à une composition à la fois délicate et lumineuse, évoquant la fraîcheur et la simplicité d’un instant naturel suspendu. </p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 24- Version verticale originale -->
+                <div class="oeuvre vertical">
+                    <div class="oeuvre-image">
+                    <img src="images/toile24.jpg" alt="Éclat de fleurs au silence du matin">
+                    </div>
+                    <div class="oeuvre-info">
+                        <h3>Éclat de fleurs au silence du matin</h3>
+                        <p class="technique">Huile sur toile - 40x30 cm (format vertical)</p>
+                        <p class="description">Un bouquet vibrant aux couleurs éclatantes repose dans un vase sombre, contrastant avec la douceur pastel du fond. La lumière semble caresser les fleurs, créant une atmosphère intime et apaisante, presque suspendue dans le temps.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 25--> 
+                <div class="oeuvre">
+                    <img src="images/toile25.jpg" alt="Le silence à deux">
+                    <div class="oeuvre-info">
+                        <h3>Le silence à deux</h3>
+                        <p class="technique">Hiuile sur toile - 40x50 cm</p>
+                        <p class="description">Sur un banc aux teintes douces, deux silhouettes se rapprochent sans se regarder vraiment. Entre gestes tendres et distance invisible, la toile capte un moment suspendu, où l’intimité se mêle à une légère mélancolie.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 26--> 
+                <div class="oeuvre">
+                    <img src="images/toile26.jpg" alt="Venise en Couleurs Vives">
+                    <div class="oeuvre-info">
+                        <h3>Venise en Couleurs Vives</h3>
+                        <p class="technique">Huile sur toile - 30x25 cm</p>
+                        <p class="description">Une scène lumineuse de Venise où les façades colorées dansent le long du canal, reliées par un pont élégant. Les gondoles glissent doucement sur l’eau animée, tandis que le ciel texturé renforce l’atmosphère vivante et chaleureuse de la ville.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                <!-- Toile 27--> 
+                <div class="oeuvre">
+                    <img src="images/toile27.jpg" alt="Crépuscule sur le Nil ">
+                    <div class="oeuvre-info">
+                        <h3>Crépuscule sur le Nil</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Une scène paisible du Nil au coucher du soleil, où une barque glisse sur des eaux dorées tandis que des silhouettes humaines se rassemblent sur la rive. À l’horizon, les pyramides se dressent sous un ciel chaud et coloré, évoquant à la fois la sérénité et l’héritage intemporel de l’Égypte.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                 <!-- Toile 28--> 
+                <div class="oeuvre vertical">
+                <div class="oeuvre-image">
+                  <img src="images/toile28.jpg" alt="Nefertiti, Silence d’Or vertical">
+                  </div>
+                  <div class="oeuvre-info">
+                  <h3>Nefertiti, Silence d’Or</h3>
+                  <p class="technique">Huile sur toile - 40x50 cm (format vertical)</p>
+                  <p class="description">Une silhouette élancée de Néfertiti se détache dans un fond ocre chaleureux, baignée de mystère et de sérénité. Son port noble et son regard lointain évoquent à la fois la puissance et la grâce intemporelle de l’Égypte ancienne.</p>                                                 
+                  <p class="prix"></p>
+                   </div>
+                </div>
+                     <!-- Toile 29--> 
+                <div class="oeuvre">
+                    <img src="images/toile29.jpg" alt="Miami Éclat – Rêverie Art Déco">
+                    <div class="oeuvre-info">
+                        <h3>Miami Éclat – Rêverie Art Déco</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette toile vibrante capture l'essence flamboyante de Miami dans les années 1930, à l'apogée de l'Art Déco. Avec des couleurs saturées et des formes géométriques audacieuses, l'artiste mêle palmiers stylisés, bâtiments aux lignes épurées et reflets aquatiques pour évoquer une atmosphère à la fois luxuriante et sophistiquée. Le ciel pastel et les jeux de lumière sur l'eau ajoutent une touche onirique, célébrant l'élégance rétro et l'énergie ensoleillée de la ville. Une ode moderne aux contrastes de Miami : glamour, exubérance et douceur tropicale.
+(Inspiré par l'esthétique de l'artiste, le style rappelle les œuvres de Charles Pougin, mentionné en signature.)</p>
+
+                        <p class="prix"></p>
+                  </div>
+                </div>
+                     <!-- Toile 30--> 
+                <div class="oeuvre">
+                    <img src="images/toile30.jpg" alt="Reflets vénitiens en couleurs vives">
+                    <div class="oeuvre-info">
+                        <h3>Reflets vénitiens en couleurs vives</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Une scène vibrante de Venise où les maisons colorées bordent un canal animé. Les bateaux glissent sur l’eau turquoise, reflétant l’énergie et la chaleur d’une ville pleine de vie et de lumière.</p>
+                        <p class="prix"></p>
+                     </div>
+                </div>
+                     <!-- Toile 31--> 
+                <div class="oeuvre">
+                    <img src="images/toile31.jpg" alt="Les Couleurs de l'Atlas : Harmonie Berbère">
+                    <div class="oeuvre-info">
+                        <h3>Les Couleurs de l'Atlas : Harmonie Berbère</h3>
+                        <p class="technique">Acrylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette peinture vibrante capture l'essence pittoresque d'un village marocain blotti au pied des montagnes de l'Atlas. Les maisons aux teintes éclatantes – rose, bleu, jaune et orange – reflètent l’architecture traditionnelle berbère, tandis que les jardins fleuris et les ruelles sinueuses évoquent une atmosphère chaleureuse et accueillante. L’arrière-plan montagneux, imposant et minéral, contraste avec la douceur colorée du village, créant une harmonie entre nature et culture. Une célébration poétique de la vie marocaine, où chaque détail respire la joie et l’authenticité.</p>
+                        <p class="prix"></p>
+                   </div>
+                </div>
+                     <!-- Toile 32--> 
+                <div class="oeuvre">
+                    <img src="images/toile32.jpg" alt="L'Échappée Provençale">
+                    <div class="oeuvre-info">
+                        <h3>L'Échappée Provençale</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Cette toile poétique plonge le spectateur dans un paysage provençal idyllique, où les collines verdoyantes ondulent sous un ciel azuréen. Les maisons aux toits rouges, blotties au bord d’une rivière sinueuse, évoquent le charme paisible des villages du Sud de la France. Les voiliers glissant sur l’eau et les champs de coquelicots flamboyants ajoutent une touche de douceur et de sérénité, capturant l’essence ensoleillée et bucolique de la Provence. Une invitation au voyage et à la rêverie.</p>
+                        <p class="prix"></p>
+                      </div>
+                </div>
+                     <!-- Toile 33--> 
+                <div class="oeuvre">
+                    <img src="images/toile33.jpg" alt="L'Échappée Solitaire">
+                    <div class="oeuvre-info">
+                        <h3>L'Échappée Solitaire</h3>
+                        <p class="technique">Huile sur toile - 30x25 cm</p>
+                        <p class="description">Cette peinture évoque une atmosphère de calme et de mélancolie, où une barque usée et colorée flotte sur une mer paisible sous un ciel peuplé d'oiseaux en vol. À l'horizon, une ville lointaine se dessine, suggérant un voyage entre solitude et liberté, entre le passé et l'inconnu. Les reflets chatoyants de l'eau et les nuances du ciel créent une harmonie poétique, invitant à la contemplation.</p>
+                        <p class="prix"></p>
+                      </div>
+                </div>
+                     <!-- Toile 34--> 
+                <div class="oeuvre">
+                    <img src="images/toile34.jpg" alt="Flottille sous le Vent">
+                    <div class="oeuvre-info">
+                        <h3>Flottille sous le Vent</h3>
+                        <p class="technique">Huile sur toile - 30x25 cm</p>
+                        <p class="description">Cette peinture impressionniste capture une scène maritime apaisante où plusieurs voiliers naviguent sur une mer agitée, baignée d'une lumière douce et vaporeuse. Les voiles gonflées par le vent et les reflets mouvants de l'eau créent une atmosphère à la fois dynamique et sereine, évoquant la liberté et l'harmonie avec les éléments naturels.</p>
+                        <p class="prix"></p>
+                     </div>
+                </div>
+                     <!-- Toile 35--> 
+                <div class="oeuvre">
+                    <img src="images/toile35.jpg" alt="L'Échappée Deauvillaise">
+                    <div class="oeuvre-info">
+                        <h3>L'Échappée Deauvillaise</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Cette toile vibrante capture l'essence ensoleillée de Deauville, où le sable doré se mêle à l'azur infini de la mer. Sous un ciel aux nuages légers, des parasols colorés ponctuent la plage comme des fleurs printanières, abritant des silhouettes en quête de douceur estivale. Au loin, des voiliers dansent sur les vagues tandis qu’un phare veille sur cette scène paisible, symbole d’évasion et de lumière normande. Une ode à la douceur de vivre, où chaque détail respire la quiétude et la joie des jours d’été.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                     <!-- Toile 36--> 
+                <div class="oeuvre">
+                    <img src="images/toile36.jpg" alt="Marées d'Armor – L'Appel des Voiles Oubliées"">
+                    <div class="oeuvre-info">
+                        <h3>Marées d'Armor – L'Appel des Voiles Oubliées"</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Sous un ciel breton aux nuances changeantes, des voiliers aux voiles vibrantes – jaune soleil, rouge sang, orange flamboyant – glissent sur les eaux miroitantes de la côte. Leurs silhouettes élancées, presque fantomatiques, semblent répondre à l’appel des ruines séculaires et des clochers lointains, gardiens silencieux d’un passé maritime légendaire. Une symphonie de couleurs et de lumière où la mer, à la fois douce et impétueuse, porte les rêves des marins d’autrefois.</p>
+                        <p class="prix"></p>
+                  </div>
+                </div>
+                     <!-- Toile 37--> 
+                <div class="oeuvre">
+                    <img src="images/toile37.jpg" alt="Le pont des saisons ardentes ">
+                    <div class="oeuvre-info">
+                        <h3>Le pont des saisons ardentes </h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Un petit pont sombre traverse un ruisseau paisible, reliant deux rives baignées de couleurs chaudes. Le chemin sinueux invite à une promenade au cœur d’un paysage d’automne vibrant, entre calme et mélancolie.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                     <!-- Toile 38--> 
+                <div class="oeuvre">
+                    <img src="images/toile38.jpg" alt=""Crépuscule sur le port aux couleurs vives >
+                    <div class="oeuvre-info">
+                        <h3>Crépuscule sur le port aux couleurs vives </h3>
+                        <p class="technique">Huile sur toile - 40x50 cm</p>
+                        <p class="description">Une scène portuaire baignée de teintes éclatantes où un voilier glisse paisiblement sur l’eau sombre. Des silhouettes colorées observent le paysage, tandis que les maisons lumineuses contrastent avec le ciel tourmenté, créant une atmosphère à la fois calme et vibrante.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+                     <!-- Toile 39--> 
+                      <div class="oeuvre">
+                    <img src="images/toile39.jpg" alt="Sérénité dans les Bouches de Kotor">      
+                    <div class="oeuvre-info">
+                        <h3>Sérénité dans les Bouches de Kotor</h3>
+                        <p class="technique">Acylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette œuvre représente l'un des joyaux les plus célèbres du Monténégro : l'île artificielle de Notre-Dame-du-Rocher (Gospa od Škrpjela), située dans les Bouches de Kotor, face au village de Perast.</p>
+                        <p class="prix"></p>
+                   </div>
+                </div>
+                     <!-- Toile 40 - Version verticale originale -->
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile40.jpg" alt="L'Élégante au Parasol">
+                     </div>
+                    <div class="oeuvre-info">
+                        <h3>L'Élégante au Parasol</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (format vertical)</p>
+                        <p class="description">Cette œuvre lumineuse capture un instant de sérénité en plein air. Une silhouette féminine, vêtue d'une robe claire aux reflets rosés, se tient debout au sommet d'un talus fleuri. Elle tient une ombrelle d'un vert vibrant qui la protège d'un soleil éclatant, tandis qu'un ciel azur aux touches vaporeuses complète l'arrière-plan. La technique, faite de touches de peinture visibles et spontanées, donne une impression de mouvement et de légèreté, comme si une brise estivale traversait le paysage.</p>
+                        <p class="prix"></p>
+                        </div>
+                </div>
+                     <!-- Toile 41--> 
+                      <div class="oeuvre">
+                    <img src="images/toile41.jpg" alt="Sérénité dans les Bouches de Kotor">      
+                    <div class="oeuvre-info">
+                        <h3>Sérénité dans les Bouches de Kotor</h3>
+                        <p class="technique">Acylique sur toile - 40x50 cm</p>
+                        <p class="description">Cette œuvre représente l'un des joyaux les plus célèbres du Monténégro : l'île artificielle de Notre-Dame-du-Rocher (Gospa od Škrpjela), située dans les Bouches de Kotor, face au village de Perast.</p>
+                        <p class="prix"></p>
+                        </div>
+                </div>
+                     <!-- Toile 42--> 
+                      <div class="oeuvre">
+                    <img src="images/toile42.jpg" alt="Reflets paisibles sur le port de Trouville">      
+                    <div class="oeuvre-info">
+                        <h3>Reflets paisibles sur le port de Trouville</h3>
+                        <p class="technique">Acylique sur toile - 40x50 cm</p>
+                        <p class="description">Trouville-sur-Mer est une charmante station balnéaire normande, connue pour son port animé, ses maisons colorées et son ambiance à la fois élégante et authentique. Entre mer et rivière, elle séduit par sa lumière douce et son atmosphère paisible, souvent source d’inspiration pour les artistes.</p>
+                        <p class="prix"></p>
+                        </div>
+                </div>
+                     <!-- Toile 43--> 
+                      <div class="oeuvre">
+                    <img src="images/toile43.jpg" alt="Le Lac aux Toits Rouges">    
+                    <div class="oeuvre-info">
+                        <h3>Le Lac aux Toits Rouges</h3>
+                        <p class="technique">Acylique sur toile - 40x50 cm</p>
+                        <p class="description">Une vallée verdoyante s'étend autour d'un lac bleu cobalt aux reflets argentés. Des cyprès sombres ponctuent les collines lumineuses, tandis que de petites maisons aux toits rouges se nichent paisiblement dans le paysage. En arrière-plan, des montagnes enneigées se fondent dans un ciel nuageux, offrant une atmosphère sereine et colorée, entre naïveté et poésie.</p>
+                        <p class="prix"></p>
+                        </div>
+                </div>
+                     <!-- Toile 44--> 
+                      <div class="oeuvre">
+                    <img src="images/toile44.jpg" alt="L'Échappée Tropicale">      
+                    <div class="oeuvre-info">
+                        <h3>L'Échappée Tropicale</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm</p>
+                        <p class="description">"L'Échappée Tropicale" capture la sérénité d’un rivage paradisiaque où la mer turquoise se mêle à un ciel embrumé de chaleur. Sous les palmiers aux feuilles dansantes, une cabane rouge isolée sur pilotis invite à la rêverie, tandis que des voiliers lointains glissent sur les flots, évoquant liberté et escapade. Une atmosphère à la fois vibrante et apaisante, où nature et imagination se rencontrent.</p>
+                        <p class="prix"></p>
+                        </div>
+                </div>
+                     <!-- Toile 45 - Version verticale originale -->
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile45.jpg" alt="Éclat Flamenco"> 
+                     </div>
+                    <div class="oeuvre-info">
+                        <h3>Éclat Flamenco</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (format vetical)</p>
+                        <p class="description">Cette œuvre expressive capture l'énergie vibrante et la passion du flamenco à travers une silhouette dynamique et des couleurs ardentes. Les touches gestuelles et les fleurs stylisées encadrent la figure dansante, évoquant le mouvement, la musique et l'émotion brute de cet art traditionnel espagnol. Une explosion de rouge et de textures donne vie à l'instant éphémère d'une performance envoûtante.</p>
+                        <p class="prix"></p>
+                        </div>
+                </div>
+                     <!-- Toile 46--> 
+                      <div class="oeuvre">
+                    <img src="images/toile46.jpg" alt="La Promenade du Pont Rouge">      
+                    <div class="oeuvre-info">
+                        <h3>La Promenade du Pont Rouge</h3>
+                        <p class="technique">Huile sur toile - 30x25 cm</p>
+                        <p class="description">Dans ce jardin japonais empreint de douceur et de poésie, une geisha vêtue d'un kimono fleuri se promène délicatement, ombrelle à la main, au bord d'un lac aux reflets bleutés.
+Un pont rouge vermillon, symbole de passage entre deux mondes, enjambe tranquillement l'eau calme. Les cerisiers en fleurs roses éclaboussent la toile de couleurs vibrantes, tandis que la végétation luxuriante enveloppe la scène d'une atmosphère paisible et contemplative.
+Cette œuvre célèbre l'harmonie entre l'être humain et la nature, si chère à la philosophie japonaise, où chaque élément — l'eau, les fleurs, le pont — invite à la méditation et à la sérénité.</p>
+                        <p class="prix"></p>
+                   </div>
+                </div>
+                     <!-- Toile 47 - Version verticale originale -->
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile47.jpg" alt="Bouquet sous la brume">   
+                   </div>    
+                    <div class="oeuvre-info">
+                        <h3>Bouquet sous la brume</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm(format vertical) </p>
+                        <p class="description">Un généreux bouquet de fleurs sauvages aux tons chauds — rouges, orangés, jaunes et roses — rehaussé d'touches de violet, éclate avec vitalité sur un fond gris nuageux aux textures vaporeuses. La touche généreuse et libre, rappelant l'esprit impressionniste, donne au bouquet un mouvement presque vibrant, comme si les fleurs frémissaient sous une lumière douce et diffuse. Le contraste entre la chaleur explosive des fleurs et la sobriété du fond crée une atmosphère à la fois mélancolique et lumineuse, célébrant la beauté éphémère de la nature.</p>
+                        <p class="prix"></p>
+                </div>
+                </div>
+                     <!-- Toile 48--> 
+                      <div class="oeuvre">
+                    <img src="images/toile48.jpg" alt="Harmonie d'Enfance">      
+                    <div class="oeuvre-info">
+                        <h3>Harmonie d'Enfance</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (vendu)</p>
+                        <p class="description">Cette œuvre délicate et poétique représente deux enfants unis dans un moment de complicité musicale. Assis côte à côte devant un piano, leurs silhouettes graciles et leurs visages concentrés évoquent l'innocence et la pureté de l'enfance. Leurs doigts effleurent les touches avec une tendresse presque sacrée, comme s'ils tissaient ensemble une mélodie empreinte de rêves et de souvenirs. La lumière douce qui les enveloppe et les détails naïfs du décor soulignent la beauté simple de cet instant, où la musique devient le langage universel de leur amitié.</p>
+                        <p class="prix"></p>
+                        </div>
+                        </div>
+                     <!-- Toile 49--> 
+                      <div class="oeuvre">
+                    <img src="images/toile49.jpg" alt=""Échos Voilés>      
+                    <div class="oeuvre-info">
+                        <h3>Échos Voilés</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm </p>
+                        <p class="description">Quatre femmes voilées se tiennent côte à côte, drapées dans des teintes allant du bleu profond au blanc ivoire, évoquant la progression des saisons. Sur un fond rosé et brumeux, leurs silhouettes à la fois distinctes et fusionnelles interrogent l'identité, la sororité et le mystère de l'âme féminine. La touche expressionniste confère à l'œuvre une tension entre visibilité et effacement.</p>
+                        <p class="prix"></p>
+                   </div>
+                   </div>
+                     <!-- Toile 50--> 
+                      <div class="oeuvre">
+                    <img src="images/toile50.jpg" alt="Échos Marins sous les Pinceaux du Vent">      
+                    <div class="oeuvre-info">
+                        <h3>Échos Marins sous les Pinceaux du Vent</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm (vendu)</p>
+                        <p class="description">Cette peinture impressionniste capture une scène côtière baignée de lumière vaporeuse, où deux voiliers glissent sur une mer aux reflets changeants. Les touches de couleur fluides et les contours estompés évoquent le mouvement des vagues et la brume légère enveloppant les falaises lointaines, créant une atmosphère à la fois paisible et mystérieuse. L’œuvre semble suspendre un instant poétique entre ciel et eau.</p>
+                        <p class="prix"></p>   
+                 </div>
+                   </div>
+                     <!-- Toile 51--> 
+                      <div class="oeuvre">
+                    <img src="images/toile51.jpg" alt=""Le chemin vers la mer >      
+                    <div class="oeuvre-info">
+                        <h3>Le chemin vers la mer </h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un paysage vibrant où un sentier serpente entre arbres fleuris et maisons paisibles, guidant le regard vers une mer profonde sous un ciel tourmenté.</p>
+                        <p class="prix"></p>   
+                   </div>
+                   </div>
+                     <!-- Toile 52--> 
+                      <div class="oeuvre">
+                    <img src="images/toile52.jpg" alt="Mystère des Brumes Bleutées">      
+                    <div class="oeuvre-info">
+                        <h3>Mystère des Brumes Bleutées</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm </p>
+                        <p class="description">Cette peinture évoque une atmosphère mystérieuse et sereine, où les contours flous d’un paysage hivernal se fondent dans une brume bleutée. Les silhouettes des arbres et des bâtiments, à peine esquissées, créent une impression de calme et de solitude, comme un souvenir lointain ou un rêve évanescent. Les tons froids et la lumière diffuse suggèrent une quiétude mélancolique, presque onirique.</p>
+                        <p class="prix"></p>   
+                                   </div>
+                   </div>
+                     <!-- Toile 53--> 
+                      <div class="oeuvre">
+                    <img src="images/toile53.jpg" alt="Port Méditerranéen au Crépuscule">      
+                    <div class="oeuvre-info">
+                        <h3>Port Méditerranéen au Crépuscule</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Cette peinture vibrante et poétique dépeint un paisible port méditerranéen baigné d'une lumière dorée. Les voiliers aux voiles colorées flottent sur une mer turquoise, tandis que des maisons aux teintes chaudes bordent le rivage. L'atmosphère sereine et les reflets lumineux évoquent la douceur de vivre et le charme intemporel des villages côtiers.</p>
+                        <p class="prix"></p>  
+                        </div>
+                   </div>
+                     <!-- Toile 54--> 
+                      <div class="oeuvre">
+                    <img src="images/toile54.jpg" alt=""Abondance du matin>      
+                    <div class="oeuvre-info">
+                        <h3>Abondance du matin</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm </p>
+                        <p class="description">Une nature morte généreuse et lumineuse réunissant fruits, pain et céramiques sur une table. Le pichet blanc aux motifs bleus dialogue avec la douceur des agrumes, évoquant la simplicité et la chaleur d'un instant quotidien.</p>
+                        <p class="prix"></p>  
+                          </div>
+                   </div>
+                     <!-- Toile 55--> 
+                      <div class="oeuvre">
+                    <img src="images/toile55.jpg" alt="Éclat sur le Grand Canal">      
+                    <div class="oeuvre-info">
+                        <h3>Éclat sur le Grand Canal</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Une interprétation vibrante de Venise où l’architecture colorée semble danser au-dessus d'une eau turquoise lumineuse. La silhouette majestueuse de la basilique Santa Maria della Salute domine l'horizon sous un ciel nuancé, évoquant la magie intemporelle de la cité des Doges.</p>
+                        <p class="prix"></p>
+                          </div>
+                   </div>
+                     <!-- Toile 56--> 
+                      <div class="oeuvre">
+                    <img src="images/toile56.jpg" alt="Les Sœurs silencieuses">      
+                    <div class="oeuvre-info">
+                        <h3>Les Sœurs silencieuses</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Six femmes aux yeux clos et aux lèvres colorées se tiennent côte à côte dans un style expressif et épuré. Leurs visages stylisés, presque masques, célèbrent la sororité, la diversité et la force tranquille du féminin.</p>
+                        <p class="prix"></p>
+                          </div>
+                         </div>
+                     <!-- Toile 57 - Version verticale originale -->
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile57.jpg" alt="L'Entrebâillement"> 
+                         </div>
+                    <div class="oeuvre-info">
+                        <h3>L'Entrebâillement</h3>
+                        <p class="technique">Huile sur toile - 30x20 cm (vendu)(format vertical)</p>
+                        <p class="description">Une silhouette féminine entrevue dans l'étroitesse d'une ouverture, baignée de tons ocre et terre brûlée. Le regard est fragmenté, suggérant un monde intérieur insaisissable, entre pudeur et mystère.</p>
+                        <p class="prix"></p>
+                          </div>
+                          </div>
+                     <!-- Toile 58--> 
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile58.jpg" alt="Sous la verrière des fleurs, Île de la Cité">
+                    </div>   
+                    <div class="oeuvre-info">
+                        <h3>Sous la verrière des fleurs, Île de la Cité</h3>
+                        <p class="technique">Huile sur toile - 40x50 (format vertical)</p>
+                        <p class="description">Dans la lumière douce filtrée par la verrière, une silhouette solitaire traverse le marché aux fleurs de l’Île de la Cité. Entourée de couleurs vibrantes et de parfums invisibles, elle semble suspendue entre rêve et réalité, comme un instant fragile au cœur de Paris.</p>
+                        <p class="prix"></p>
+                          </div>
+                         </div>
+                     <!-- Toile 59--> 
+                      <div class="oeuvre">
+                    <img src="images/toile59.jpg" alt="Éclats de Méditerranée">      
+                    <div class="oeuvre-info">
+                        <h3>Éclats de Méditerranée</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un village baigné de lumière surplombe une mer d’un bleu profond, où les voiles blanches glissent doucement. Les couleurs chaudes des maisons et des fleurs contrastent avec la fraîcheur de l’océan, évoquant la douceur paisible d’un instant suspendu.</p>
+                        <p class="prix"></p>
+                          </div>
+                         </div>
+                     <!-- Toile 60--> 
+                      <div class="oeuvre">
+                    <img src="images/toile60.jpg" alt="Reflets de lumière sur le port corse">      
+                    <div class="oeuvre-info">
+                        <h3>Reflets de lumière sur le port corse</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (vendu)</p>
+                        <p class="description">La Corse, surnommée l’Île de Beauté, est une île méditerranéenne française aux paysages contrastés mêlant montagnes sauvages, villages colorés et eaux turquoise. Elle séduit par son authenticité, sa culture forte et ses ports baignés de lumière, comme celui évoqué dans cette œuvre.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 61--> 
+                      <div class="oeuvre">
+                    <img src="images/toile61.jpg" alt="Silence sur les canaux de Venise">      
+                    <div class="oeuvre-info">
+                        <h3>Silence sur les canaux de Venise</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (vendu)</p>
+                        <p class="description">Une gondole glisse doucement sur un canal aux eaux turquoise, bordé de façades chaleureuses et fleuries. Le pont relie les rives comme un passage suspendu dans le temps, capturant la sérénité et le charme intime de Venise.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 62--> 
+                      <div class="oeuvre">
+                    <img src="images/toile62.jpg" alt="Lumières pastel de Sicile">      
+                    <div class="oeuvre-info">
+                        <h3>Lumières pastel de Sicile</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (vendu)</p>
+                        <p class="description">Une scène côtière baignée de couleurs douces et chaleureuses, où les maisons colorées s’accrochent à la colline face à une mer calme. Cette œuvre évoque la douceur de vivre sicilienne, entre architecture méditerranéenne, lumière dorée et sérénité du littoral.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 63--> 
+                      <div class="oeuvre">
+                    <img src="images/toile63.jpg" alt="Murmure d’écume ">      
+                    <div class="oeuvre-info">
+                        <h3>Murmure d’écume </h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un rivage balayé par le vent où la mer turquoise s’agite sous un ciel chargé. Les mouettes, suspendues entre ciel et horizon, accompagnent le mouvement des vagues, donnant à la scène une atmosphère à la fois vivante et mélancolique.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 64--> 
+                      <div class="oeuvre">
+                    <img src="images/toile64.jpg" alt="Le Sentier des Matins Doux ">      
+                    <div class="oeuvre-info">
+                        <h3>Le Sentier des Matins Doux </h3>
+                        <p class="technique">Huile sur toile - 30x20 cm </p>
+                        <p class="description">Un chemin baigné de lumière traverse un jardin foisonnant de couleurs, où les touches délicates évoquent la douceur d’un matin paisible et la promesse d’une promenade hors du temps.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 65--> 
+                      <div class="oeuvre">
+                    <img src="images/toile65.jpg" alt="Couleurs de Montmartre">      
+                    <div class="oeuvre-info">
+                        <h3>Couleurs de Montmartre</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Une scène vivante et chaleureuse de Montmartre, où les façades colorées, les artistes de rue et le Sacré-Cœur se mêlent dans une atmosphère vibrante et poétique, capturant l’âme bohème du quartier.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 66--> 
+                      <div class="oeuvre">
+                    <img src="images/toile66.jpg" alt="Sous les cerisiers en lumière">      
+                    <div class="oeuvre-info">
+                        <h3>Sous les cerisiers en lumière</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Une prairie paisible baignée de douceur printanière, où les arbres en fleurs déploient leurs teintes roses sous un ciel clair. Entre nature et tranquillité, une silhouette se promène au milieu de la vie discrète des oiseaux, dans une atmosphère calme et lumineuse.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+
+                      <!-- Toile 67--> 
+                      <div class="oeuvre">
+                    <img src="images/toile67.jpg" alt="Baiser sous la pluie vénitienne">      
+                    <div class="oeuvre-info">
+                        <h3>Baiser sous la pluie vénitienne</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un couple enlacé s’embrasse sous un parapluie, au bord d’un canal aux couleurs douces. La robe rouge éclatante contraste avec la ville paisible en arrière-plan, capturant un instant d’amour suspendu dans une atmosphère romantique et intemporelle.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 68--> 
+                      <div class="oeuvre">
+                    <img src="images/toile68.jpg" alt="Éclats de rivage">      
+                    <div class="oeuvre-info">
+                        <h3>Éclats de rivage</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un village coloré s’accroche doucement à la côte, baigné de lumière et bordé par une mer paisible où quelques barques dérivent. L’atmosphère évoque la chaleur, le calme et la douceur de vivre méditerranéenne.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>                
+                     <!-- Toile 69--> 
+                      <div class="oeuvre">
+                    <img src="images/toile69.jpg" alt="Nu féminin allongé">      
+                    <div class="oeuvre-info">
+                        <h3>Nu féminin allongé</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un nu féminin allongé, traité avec des tons chauds et doux, semble flotter entre deux espaces. La simplicité des formes et la posture détendue évoquent à la fois l’abandon, la sérénité et une certaine intimité silencieuse.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 70 - Version verticale originale -->
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile70.jpg" alt="Douceur portée">
+                     </div>
+                    <div class="oeuvre-info">
+                        <h3>Douceur portée</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm (format vertical) </p>
+                        <p class="description">De dos, une mère avance avec grâce, son bébé lové contre elle dans un tissu aux couleurs vives. Les teintes chaudes et les motifs vibrants racontent la tendresse, la force et la transmission silencieuse entre deux vies liées.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 71--> 
+                      <div class="oeuvre">
+                    <img src="images/toile71.jpg" alt="Le pont des cerisiers en rêve">      
+                    <div class="oeuvre-info">
+                        <h3>Le pont des cerisiers en rêve</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Un jardin paisible aux couleurs printanières où un pont rouge enjambe une rivière calme, entouré de cerisiers en fleurs et de reflets doux, évoquant sérénité et évasion.</p></p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 72--> 
+                      <div class="oeuvre">
+                    <img src="images/toile72.jpg" alt="Étreinte aux deux mondes">      
+                    <div class="oeuvre-info">
+                        <h3>Étreinte aux deux mondes</h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Une fusion onirique entre terre et mer, où deux figures s’enlacent à la frontière de deux univers colorés, évoquant l’amour comme un pont entre les réalités.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 73 - Version verticale originale -->
+                      <div class="oeuvre vertical">
+                      <div class="oeuvre-image">
+                    <img src="images/toile73.jpg" alt="Élégance du crépuscule">   
+                      </div> 
+                    <div class="oeuvre-info">
+                        <h3>Élégance du crépuscule</h3>
+                        <p class="technique">Huile sur toile - 30x25 cm (format vertical) </p>
+                        <p class="description">Silhouette élancée d’une femme africaine, empreinte de grâce et de dignité, se détachant sur un fond chaud et lumineux. Son port majestueux et ses ornements évoquent la beauté, la tradition et la force tranquille.</p>
+                        <p class="prix"></p>
+                        </div>
+                         </div>
+                     <!-- Toile 74--> 
+                      <div class="oeuvre">
+                    <img src="images/toile74.jpg" alt="Promenade au bord de l’azur">      
+                    <div class="oeuvre-info">
+                        <h3>Promenade au bord de l’azur></h3>
+                        <p class="technique">Huile sur toile - 40x50 cm </p>
+                        <p class="description">Une scène paisible d’un village côtier baigné de couleurs douces, où quelques silhouettes contemplent la mer et un voilier glissant lentement, capturant un instant de calme et de poésie méditerranéenne.</p>
+                        <p class="prix"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="apropos" class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionné(e) par l'impressionnisme depuis mon plus jeune âge, je m'inspire des grands maîtres comme Monet, Renoir et Pissarro pour créer des œuvres qui capturent la lumière et l'émotion du moment présent.</p>
+                    <p>Chaque toile est une invitation à voir le monde différemment, à travers le prisme de la couleur et du mouvement. Mes œuvres célèbrent la beauté éphémère de la nature et des scènes urbaines, où chaque détail raconte une histoire.</p>
+                    <p>La musique classique, et particulièrement le piano, accompagne souvent mon processus créatif. Elle m'inspire des atmosphères et des émotions que je cherche à transmettre à travers mes peintures.</p>
+                </div>
+               <div class="about-image">
+  <img src="images/portrait_artiste.jpg" alt="Portrait de l'artiste">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            </ul>
+            <p>&copy; 2023 Galerie Impressionniste. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+   
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           const tracks = [
+              {
+                    title: "Chopin - Nocturne Op. 9 No. 2",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+                },
+                {
+                    title: "Beethoven - Moonlight Sonata",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+                },
+                {
+                    title: "Mozart - Piano Sonata No. 11",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+                },
+                {
+                    title: "Ravel - Pavane pour une infante défunte",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+                    }
+           ];
+            let currentTrack = 0;
+            const audio = new Audio();
+            const playBtn = document.getElementById('playBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const trackInfo = document.getElementById('trackInfo');
+            const volumeSlider = document.getElementById('volumeSlider');
+
+            function loadTrack(index) {
+                audio.src = tracks[index].url;
+                trackInfo.textContent = tracks[index].title;
+                audio.play();
+                updatePlayBtn();
+            }
+
+            function updatePlayBtn() {
+                playBtn.innerHTML = audio.paused
+                    ? '<i class="fas fa-play"></i>'
+                    : '<i class="fas fa-pause"></i>';
+            }
+
+            playBtn.addEventListener('click', function() {
+                if (audio.paused) { audio.play(); } else { audio.pause(); }
+                updatePlayBtn();
+            });
+
+            prevBtn.addEventListener('click', function() {
+                currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+                loadTrack(currentTrack);
+            });
+
+            nextBtn.addEventListener('click', function() {
+                currentTrack = (currentTrack + 1) % tracks.length;
+                loadTrack(currentTrack);
+            });
+
+            volumeSlider.addEventListener('input', function() {
+                audio.volume = this.value;
+            });
+
+            audio.addEventListener('ended', function() {
+                currentTrack = (currentTrack + 1) % tracks.length;
+                loadTrack(currentTrack);
+            });
+
+            audio.addEventListener('play', updatePlayBtn);
+            audio.addEventListener('pause', updatePlayBtn);
+
+            loadTrack(0);
+            audio.volume = volumeSlider.value;
+        });
+    </script>
+
+</body>
+</html>
