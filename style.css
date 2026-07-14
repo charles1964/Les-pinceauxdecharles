@@ -186,22 +186,3 @@ audio {
     letter-spacing: 0.02em;
 }
 
-.btn-video {
-    display: inline-block;
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
-    background: #0a1628;
-    color: #fff;
-    padding: 0.65rem 1.15rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    border: 2px solid #c9a84c;
-    transition: all 0.3s ease;
-}
-
-.btn-video:hover {
-    background: #c9a84c;
-    color: #0a1628;
-    transform: translateY(-2px);
-}
